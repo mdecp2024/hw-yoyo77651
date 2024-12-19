@@ -122,18 +122,19 @@
 <p></p>
 <p>2. 已知可以在網頁中利用 Brython 繪製方格與塗色, 如下連結, 請設法修改此一程式, 直接將程式存入個人的 Gist, 並利用黑色方塊圍出一個圓形區域.</p>
 <p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/8ff490f7e3e5e93db88e0290a69aad71/raw/c5f9e90d87752b92cec839e6c07ed8ded4a8e18f/hw2">第二題網站</a></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/pYWKIrfSTRw?si=QVmc12jY5BIv2xlo" title="YouTube video player" width="560"></iframe></p><h3>w13_hw</h3>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/pYWKIrfSTRw?si=QVmc12jY5BIv2xlo" title="YouTube video player" width="560"></iframe></p>
+<h3>w12_hw</h3>
+<h3>w13_hw</h3>
 <p>程式連結:</p>
 <p>        <a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/cb648cb8e21cd001b87c03e68b617a2f/raw/784357e7821641076fe0b75703fb8d61e4304dbc/1">  紅色正方形</a></p>
-<p>        <a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/cb648cb8e21cd001b87c03e68b617a2f/raw/6c48f63b9994fa819fe9a93521a3fd44f3e04be1/2">方形重疊</a></p>
-<h3>w13_ai</h3><h1>HW 2</h1>
-<h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
-<p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
-<hr/>
-<p>延續 HW 1 網頁資料整理與程式練習方法, 整理下列內容 (20%):</p>
-<p>PART 2: Introduction to lists and if/else statements</p>
-<p>PART 3: Introduction to the for loop</p>
-<p>完成上述流程整理後, 請將 HW2 自評分數輸入 cp2024 自評表單中.</p><h3>w15</h3>
+<p></p>
+<p></p>
+<p><img alt="" height="200" src="/images/下載.png" width="200"/></p>
+<p>       <a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/cb648cb8e21cd001b87c03e68b617a2f/raw/6c48f63b9994fa819fe9a93521a3fd44f3e04be1/2">方形重疊</a></p>
+<p><img alt="" height="200" src="/images/下載 (1).png" width="200"/></p><h3>w13_ai</h3>
+<h3>w14_hw</h3>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/afc591b32a7979edaa3d573ac4fa68bc/raw/f3369af1e4c6b375e5b70a634274a615f687d173/hw1.py">三個圓</a></p>
+<h3>w15</h3>
 <p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/a53f2af22adf3dabcad01a2fc83350ac/raw/9ca4edf363158797f8024e1a655c9c3a4a8fa6db/hw1.py">"從1累加到100"</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sum = 0
 for i in range(1, 101):
@@ -152,9 +153,53 @@ print(f"從 1 累加到 100 的總和是：{sum}")</pre>
 result = addto(1, 100)
 print(f"從 1 累加到 100 的總和是：{result}")
 </pre>
-<p></p><h2>HW 2 Exam</h2>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/a53f2af22adf3dabcad01a2fc83350ac/raw/a122ac9fd5d2c84365b9e85aac62433821eca5dc/hw3.py">"add_only_even(1, 100)"</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def add_only_even(init, upto):
+    """
+    累加從 init 到 upto 範圍內的所有偶數，並輸出題目和結果。
+    
+    :init: 起始整數
+    :upto: 結束整數
+    :return: 範圍內偶數的累加結果
+    """
+    result = sum(i for i in range(init, upto + 1) if i % 2 == 0)
+    print(f"從 {init} 到 {upto} 的偶數累加結果為 {result}")
+    return result
+
+# 測試函式
+add_only_even(1, 100)
+</pre>
+<p><a href="https://mdecp2024.github.io/hw-41323201/content/Brython.html?src=https://gist.githubusercontent.com/41323201/1499e5af01612bb04ea3becd27e95dc2/raw/19cc81c31058cc134ffa1ce2bce96702bcdef0da/add_avold_8.py">add_avoid_8(1, 100)</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義 addto 函式
+def addto(init, upto):
+    # 初始值 sum 為 0
+    sum = 0
+    # 利用 for 迴圈進行累加
+    for i in range(init, upto + 1):
+        if i % 10 == 8:  # 檢查數字尾數是否為 8
+            sum = sum + i
+    return sum
+
+# 主程式
+init = 1
+upto = 100
+# 呼叫 addto 函式
+result = addto(init, upto)
+print("從" + str(init) + "累加到" + str(upto) + "，只加尾數為8的數=" + str(result))
+</pre>
+<h1>HW 2</h1>
+<h4>主題: Python 的數列、判斷式與重複迴圈 (20%)<span style="background-color: #ffff99;"><br/></span></h4>
+<p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 2 and Part 3</p>
+<hr/>
+<p>延續 HW 1 網頁資料整理與程式練習方法, 整理下列內容 (20%):</p>
+<p>PART 2: Introduction to lists and if/else statements</p>
+<p>PART 3: Introduction to the for loop</p>
+<p>完成上述流程整理後, 請將 HW2 自評分數輸入 cp2024 自評表單中.</p>
+<p></p>
+<h2>HW 2 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
-<p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 2 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p><h1>HW 3</h1>
+<p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 2 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
+<h1>HW 3</h1>
 <h4>主題: Python 的數字、演算法與迴圈 (20%)</h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 4 and Part 5</p>
 <p>完成上述流程整理後, 請將 HW3 自評分數輸入 cp2024 自評表單中.</p>
