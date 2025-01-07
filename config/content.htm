@@ -131,7 +131,8 @@
 <p></p>
 <p><img alt="" height="200" src="/images/下載.png" width="200"/></p>
 <p>       <a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/cb648cb8e21cd001b87c03e68b617a2f/raw/6c48f63b9994fa819fe9a93521a3fd44f3e04be1/2">方形重疊</a></p>
-<p><img alt="" height="200" src="/images/下載 (1).png" width="200"/></p><h3>w13_ai</h3>
+<p><img alt="" height="200" src="/images/下載 (1).png" width="200"/></p>
+<h3>w13_ai</h3>
 <h3>w14_hw</h3>
 <p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/afc591b32a7979edaa3d573ac4fa68bc/raw/f3369af1e4c6b375e5b70a634274a615f687d173/hw1.py">三個圓</a></p>
 <h3>w15</h3>
@@ -199,14 +200,209 @@ print("從" + str(init) + "累加到" + str(upto) + "，只加尾數為8的數="
 <h2>HW 2 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 2 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<h1>HW 3</h1>
+<h3>w16_exam1</h3>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/f13d85c240347529ede706dd80e0e5a6/raw/81cd06e8a9204678476dadd735968baef7805380/w16exam1.py">exam1</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
+import math
+ 
+# 初始化 HTML，確保 canvas 元素存在
+def setup_canvas():
+    if not document.querySelector("#my_canvas"):
+        canvas = html.CANVAS(id="my_canvas", width=800, height=600)
+        document &lt;= canvas
+ 
+setup_canvas()
+
+# Set up canvas
+canvas = document["my_canvas"]
+ctx = canvas.getContext("2d")
+
+# Set origin (32, 42)
+origin_x, origin_y = 32, 42   
+
+# Draw X
+ctx.beginPath()
+ctx.moveTo(origin_x, origin_y)
+ctx.lineTo(500, origin_y)
+ctx.strokeStyle = "black"
+ctx.lineWidth = 2
+ctx.stroke()
+
+# Draw Y
+ctx.beginPath()
+ctx.moveTo(origin_x, origin_y)
+ctx.lineTo(origin_x, 300)
+ctx.stroke()
+
+# Label origin
+ctx.font = "12px Arial"
+ctx.fillStyle = "black"
+ctx.fillText("(32, 42)", origin_x + 5, origin_y - 5)
+
+# Draw shapes
+# Adjusted placement to fix alignment issue
+
+# Hexagon (Orange)
+hex_x, hex_y = 100, 100
+ctx.beginPath()
+for i in range(6):
+    angle = i * (2 * math.pi / 6)
+    x = hex_x + 30 * math.cos(angle)
+    y = hex_y + 30 * math.sin(angle)
+    if i == 0:
+        ctx.moveTo(x, y)
+    else:
+        ctx.lineTo(x, y)
+ctx.closePath()
+ctx.fillStyle = "orange"
+ctx.fill()
+
+# 鑽石(Teal)
+ctx.beginPath()
+ctx.moveTo(160, 70)
+ctx.lineTo(180, 100)
+ctx.lineTo(160, 130)
+ctx.lineTo(140, 100)
+ctx.closePath()
+ctx.fillStyle = "teal"
+ctx.fill()
+
+# 三角形 (Teal)
+ctx.beginPath()
+ctx.moveTo(165, 130)
+ctx.lineTo(205, 130)
+ctx.lineTo(185, 100)
+ctx.closePath()
+ctx.fillStyle = "blue"
+ctx.fill()
+
+# 圓形 (Pink)
+ctx.beginPath()
+ctx.arc(230, 100, 30, 0, 2 * math.pi)
+ctx.fillStyle = "pink"
+ctx.fill()
+
+# 正方形 (Yellow)
+ctx.beginPath()
+ctx.rect(265, 75, 50, 50)
+ctx.fillStyle = "yellow"
+ctx.fill()
+
+# 長方形(Blue)
+ctx.beginPath()
+ctx.rect(320, 90, 60, 20)
+ctx.fillStyle = "black"
+ctx.fill()</pre>
+<p></p><h1>HW 3</h1>
 <h4>主題: Python 的數字、演算法與迴圈 (20%)</h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 4 and Part 5</p>
 <p>完成上述流程整理後, 請將 HW3 自評分數輸入 cp2024 自評表單中.</p>
 <h2>HW 3 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 3 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<h1>HW 4</h1>
+<h3>w16_exam2</h3>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/f13d85c240347529ede706dd80e0e5a6/raw/1a7b1a9d27e10a698d07fdde546dc8b5ec6c4b9f/w16exam2.py">exam2</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+import math
+
+
+def draw_maze(angle_degrees):
+    # 創建添加畫布
+    canvas = html.CANVAS(width=1200, height=1200)
+    brython_div = doc["brython_div1"]
+    brython_div &lt;= canvas
+
+    # 獲取繪圖上下文
+    ctx = canvas.getContext("2d")
+
+    # 設置繪圖參數
+    pixel_scale = 100
+    offset_x = 32 * 2
+    offset_y = 17 * 2
+    # 整體向右偏移量
+    move_right_offset = 200
+    angle_radians = math.radians(angle_degrees)
+
+    # 定義迷宮線條
+    lines = [
+        ((0, 0), (1, 0)),
+        ((2, 0), (5, 0)),
+        ((5, 0), (5, 5)),
+        ((3, 5), (5, 5)),
+        ((4, 5), (4, 3)),
+        ((2, 3), (4, 3)),
+        ((1, 3), (1, 5)),
+        ((3, 3), (3, 2)),
+        ((0, 0), (0, 5)),
+        ((0, 5), (2, 5)),
+        ((2, 5), (2, 4)),
+        ((2, 4), (3, 4)),
+        ((0, 2), (1, 2)),
+        ((2, 2), (2, 1)),
+        ((0, 1), (4, 1)),
+        ((4, 1), (4, 2)),
+    ]
+
+    # 旋轉繪製迷宮線條
+    ctx.strokeStyle = "black"
+    ctx.lineWidth = 2
+    for line in lines:
+        start = line[0]
+        end = line[1]
+
+        # 起點座標
+        start_x_rotated = start[0] * pixel_scale * math.cos(angle_radians) - start[1] * pixel_scale * math.sin(
+            angle_radians)
+        start_y_rotated = start[0] * pixel_scale * math.sin(angle_radians) + start[1] * pixel_scale * math.cos(
+            angle_radians)
+
+        # 終點座標
+        end_x_rotated = end[0] * pixel_scale * math.cos(angle_radians) - end[1] * pixel_scale * math.sin(
+            angle_radians)
+        end_y_rotated = end[0] * pixel_scale * math.sin(angle_radians) + end[1] * pixel_scale * math.cos(
+            angle_radians)
+
+        ctx.beginPath()
+        ctx.moveTo(
+            offset_x + move_right_offset + start_x_rotated,
+            offset_y + start_y_rotated
+        )
+        ctx.lineTo(
+            offset_x + move_right_offset + end_x_rotated,
+            offset_y + end_y_rotated
+        )
+        ctx.stroke()
+
+    return ctx, offset_x + move_right_offset, offset_y
+
+
+def label_coordinate(ctx, offset_x, offset_y, text_angle_degrees):
+    text_angle_radians = math.radians(text_angle_degrees)
+    ctx.font = "18px Arial"
+    ctx.fillStyle = "red"
+    # 原始文本位置
+    original_x = offset_x + 10
+    original_y = offset_y - 15
+    # 旋轉后的文本位置
+    rotated_x = original_x * math.cos(text_angle_radians) - original_y * math.sin(text_angle_radians)
+    rotated_y = original_x * math.sin(text_angle_radians) + original_y * math.cos(text_angle_radians)
+    ctx.save()
+    ctx.translate(offset_x, offset_y)
+    ctx.rotate(text_angle_radians)
+    ctx.fillText("(32, 42)", 10, - 15)
+    ctx.restore()
+
+
+if __name__ == "__main__":
+    # 调整迷宫角度 
+    maze_angle = 0
+    # 文本角度
+    text_angle = 0
+    ctx, offset_x, offset_y = draw_maze(maze_angle)
+    label_coordinate(ctx, offset_x, offset_y, text_angle)
+</pre>
+<p></p><h1>HW 4</h1>
 <h4>主題: 利用 Python 控制機電模擬系統 (20%)</h4>
 <p style="padding-left: 30px;">利用 <a href="https://solvespace.com/">https://solvespace.com/</a> 建立機械系統零組件</p>
 <p style="padding-left: 30px;">利用 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 建立機電模擬系統</p>
@@ -218,7 +414,159 @@ print("從" + str(init) + "累加到" + str(upto) + "，只加尾數為8的數="
 <h2>HW 4 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 4 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<h1>Final Report</h1>
+<h3>w16_exam3</h3>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/f13d85c240347529ede706dd80e0e5a6/raw/de4eb9e916256700650cafca6a9477fb09943b28/w16exam3.py">exam3</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+import math
+
+def draw_maze(angle_degrees):
+    # 創建畫布
+    canvas = html.CANVAS(width=1200, height=1200)
+    brython_div = doc["brython_div1"]
+    brython_div &lt;= canvas
+
+    # 獲取繪圖上下文
+    ctx = canvas.getContext("2d")
+
+    # 設置繪圖參數
+    pixel_scale = 100
+    offset_x = 32 * 2
+    offset_y = 17 * 2
+    # 整體向右的偏移量
+    move_right_offset = 200
+    angle_radians = math.radians(angle_degrees)
+
+    # 定義迷宮線條
+    lines = [
+        ((0, 0), (1, 0)),
+        ((2, 0), (5, 0)),
+        ((5, 0), (5, 5)),
+        ((3, 5), (5, 5)),
+        ((4, 5), (4, 3)),
+        ((2, 3), (4, 3)),
+        ((1, 3), (1, 5)),
+        ((3, 3), (3, 2)),
+        ((0, 0), (0, 5)),
+        ((0, 5), (2, 5)),
+        ((2, 5), (2, 4)),
+        ((2, 4), (3, 4)),
+        ((0, 2), (1, 2)),
+        ((2, 2), (2, 1)),
+        ((0, 1), (4, 1)),
+        ((4, 1), (4, 2)),
+    ]
+
+    # 繪製迷宮線條
+    ctx.strokeStyle = "black"
+    ctx.lineWidth = 2
+    for line in lines:
+        start = line[0]
+        end = line[1]
+
+        # 旋轉起點座標
+        start_x_rotated = start[0] * pixel_scale * math.cos(angle_radians) - start[1] * pixel_scale * math.sin(
+            angle_radians)
+        start_y_rotated = start[0] * pixel_scale * math.sin(angle_radians) + start[1] * pixel_scale * math.cos(
+            angle_radians)
+
+        # 旋轉終點座標
+        end_x_rotated = end[0] * pixel_scale * math.cos(angle_radians) - end[1] * pixel_scale * math.sin(
+            angle_radians)
+        end_y_rotated = end[0] * pixel_scale * math.sin(angle_radians) + end[1] * pixel_scale * math.cos(
+            angle_radians)
+
+        ctx.beginPath()
+        ctx.moveTo(
+            offset_x + move_right_offset + start_x_rotated,
+            offset_y + start_y_rotated
+        )
+        ctx.lineTo(
+            offset_x + move_right_offset + end_x_rotated,
+            offset_y + end_y_rotated
+        )
+        ctx.stroke()
+
+    return ctx, offset_x + move_right_offset, offset_y, pixel_scale
+
+
+def find_path():
+     
+    path = [
+        ((1.5, 0), (1.5, 0.5)),
+        ((1.5, 0.5), (4.5, 0.5)),
+        ((4.5, 0.5), (4.5, 2.5)),
+        ((4.5, 2.5), (3.5, 2.5)),
+        ((3.5, 2.5), (3.5, 1.5)),
+        ((3.5, 1.5), (2.5, 1.5)),
+        ((2.5, 1.5), (2.5, 2.5)),
+        ((2.5, 2.5), (1.5, 2.5)),
+        ((1.5, 2.5), (1.5, 3.5)),
+        ((1.5, 3.5), (3.5, 3.5)),
+        ((3.5, 3.5), (3.5, 4.5)),
+        ((3.5, 4.5), (2.5, 4.5)),
+        ((2.5, 4.5), (2.5, 5))
+    ]
+    return path
+
+
+def draw_path(ctx, offset_x, offset_y, angle_degrees, path, pixel_scale):
+    angle_radians = math.radians(angle_degrees)
+    ctx.strokeStyle = "red"
+    ctx.lineWidth = 2
+    for line in path:
+        start = line[0]
+        end = line[1]
+
+        # 旋轉起點座標
+        start_x_rotated = start[0] * pixel_scale * math.cos(angle_radians) - start[1] * pixel_scale * math.sin(
+            angle_radians)
+        start_y_rotated = start[0] * pixel_scale * math.sin(angle_radians) + start[1] * pixel_scale * math.cos(
+            angle_radians)
+
+        # 旋轉終點座標
+        end_x_rotated = end[0] * pixel_scale * math.cos(angle_radians) - end[1] * pixel_scale * math.sin(
+            angle_radians)
+        end_y_rotated = end[0] * pixel_scale * math.sin(angle_radians) + end[1] * pixel_scale * math.cos(
+            angle_radians)
+
+        ctx.beginPath()
+        ctx.moveTo(
+            offset_x + start_x_rotated,
+            offset_y + start_y_rotated
+        )
+        ctx.lineTo(
+            offset_x + end_x_rotated,
+            offset_y + end_y_rotated
+        )
+        ctx.stroke()
+
+
+def label_coordinate(ctx, offset_x, offset_y, text_angle_degrees):
+    text_angle_radians = math.radians(text_angle_degrees)
+    ctx.font = "18px Arial"
+    ctx.fillStyle = "red"
+    # 原始文本位置
+    original_x = offset_x + 10
+    original_y = offset_y - 15
+    # 旋轉後文本位置
+    rotated_x = original_x * math.cos(text_angle_radians) - original_y * math.sin(text_angle_radians)
+    rotated_y = original_x * math.sin(text_angle_radians) + original_y * math.cos(text_angle_radians)
+    ctx.save()
+    ctx.translate(offset_x, offset_y)
+    ctx.rotate(text_angle_radians)
+    ctx.fillText("(32, 42)", 10, - 15)
+    ctx.restore()
+
+
+if __name__ == "__main__":
+    maze_angle = 0
+    text_angle = 0
+    ctx, offset_x, offset_y, pixel_scale = draw_maze(maze_angle)
+    path = find_path()
+    draw_path(ctx, offset_x, offset_y, maze_angle, path, pixel_scale)
+    label_coordinate(ctx, offset_x, offset_y, text_angle)</pre>
+<p></p><h1>Final Report</h1>
 <p>期末口頭與書面專題報告 (20%)</p>
 <p>期末口頭專題報告影片:</p>
 <p style="padding-left: 30px;">......</p>
