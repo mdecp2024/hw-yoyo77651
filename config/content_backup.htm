@@ -124,7 +124,247 @@
 <p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/8ff490f7e3e5e93db88e0290a69aad71/raw/c5f9e90d87752b92cec839e6c07ed8ded4a8e18f/hw2">第二題網站</a></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/pYWKIrfSTRw?si=QVmc12jY5BIv2xlo" title="YouTube video player" width="560"></iframe></p>
 <h3>w12_hw</h3>
-<h3>w13_hw</h3>
+<p>第一題:</p>
+<p>"<a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/224ab1f367300d5256a09a7ae36d16f419667a3b/w12hw1.py">你叫什麼</a>名字"</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">input("What's your name?")</pre>
+<p>"<a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/498a3c67004b9bcf985b32ff4022dd33be646aea/w12hw2.py">cat</a>"</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print ("   /\_/\   ")
+print (" &gt;^.^&lt;   ")
+print ("    / \    ")
+print ("   (___)___")</pre>
+<p><br/><br/></p>
+<p>第二題:</p>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/feb41cbdfca94d95043b6f880dac1bd6c066375c/w12%2520hw3.py"> "name"</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">first_name = "Liao" #變數first_name為"自己的姓"
+last_name  = "Tzu YU" #變數last_name為"自己的名"
+print (first_name) #列印變數first_name
+print (last_name) #列印變數last_name</pre>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/8dcfcdf6b27be95613468db77bfd592d492bb4ff/w12hw4.py"> "名字和喜歡的食物"</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">name = input("What's your name?") #變數name為input所輸入之文字
+favorite_food = input ("What is your favorite food?") #變數favorite_food為input所輸入之文字
+print ("Hi! My name is " + name) #列印"Hi! My name is "(這段為文字) + name(name這個變數的數值)
+print ("My favorite food is " + favorite_food)  #列印"My favorite food is "(這段為文字) + favorite_food(favorite_food這個變數的數值)
+print (name + "'s favorite food is " + favorite_food) #列印name (數值)+ 's favorite food is (此段為文字)+favorite_food(數值)
+</pre>
+<p></p>
+<p>第三題:</p>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/ea1f4943fab0324dad4c1eec64861aa1d7722f78/w12%2520hw5.py"> "買書"</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">programming_books = ["Learn python", "Python for all",  "Intro to python"] #在programming_books變數裡面有3個字串
+print (programming_books) #列印programming_books變數(會出現三個字串)
+wanted_book = input("Hi! What book would you like to buy?") #設定一個變數為wanted_book其等於input指令回傳之數值
+print (wanted_book) #列印wanted_book變數
+if wanted_book in programming_books: #如果 "變數wanted_book"回傳之值 在"programming_books"字串當中
+    print ("Yes, we sell it!")       #列印 是的我們有販賣
+else:                            #反之    
+    print ("Sorry, we don't sell that book") #列印 抱歉我們沒有販賣</pre>
+<p>第四題:</p>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/4cc5801d02cffb9b3b8d504804636e8889f54521/w12%2520hw6.py"> "購物清單"</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">shopping_list = ["carrots", "chocolate", "olives"] #在shopping_list變數裡面有3個字串
+print (shopping_list) #列印shopping_list變數
+new_item = input("What else do I have to buy?") #設定一個變數為new_item其等於input指令回傳之數值
+ 
+if new_item in shopping_list:  #如果 "變數new_item(想買的物品)"回傳之值 在"shopping_list(購物清單)"字串當中就執行以下程式
+    print (new_item + " is/are already in the shopping list") #列印 "new_item變數的數值"+字串is/are already in the shopping list
+    print (shopping_list) #列印shopping_list字串
+else:                    #反之
+    shopping_list.append(new_item) #購物清單.加入(想要購買的物品)    如果不在購物清單內那就將未在字串中物品加入購物清單
+    print (shopping_list) #列印購物清單
+#以下是移除物品的程式
+item_to_remove = input("What do I have to remove?") #item_to_remove(想要移除的物品)
+ 
+if item_to_remove in shopping_list: #如果 想要移除的物品在購物清單中 那就執行
+    shopping_list.remove(item_to_remove) #把購物清單.移除(想要移除的物品)
+    print (shopping_list) #列印購物清單
+else:                     #反之
+    print (item_to_remove + " is/are not in the list") #列印 想要移除的物品+is/are not in the list(不在清單中)
+    print (shopping_list) #列印購物清單</pre>
+<p>第五題:</p>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/6687e758a5470e647fa4d7467fdc5554bf803977/w12hw8.py">"menu"</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">todays_menu = ["burger", "salad", "coke"] #todays_menu變數=今天菜單["burger", "salad", "coke"
+side_dish_index = todays_menu.index("salad") #side_dish_index變數 = 今日菜單.找出"沙拉"位於字串中第幾個
+print (side_dish_index) #列印side_dish_index  列印他在第幾位
+todays_menu.pop(side_dish_index) #今日菜單.移除字串中的元素(side_dish_index變數"沙拉")  這裡意思是移除沙拉
+print (todays_menu) #列印今日菜單
+todays_menu.insert(side_dish_index, "fries") #今日菜單.在字串中插入(side_dish_index, "fries")   這裡意思是加入薯條
+print (todays_menu) #列印今日菜單</pre>
+<p>第六題:</p>
+<p>:<a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/f23f42e8d7b6373c66d2758262edbfa0b8cd1a60/w12hw7.py">"city"</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">cities = ["San Diego", "Prague", "Cape Town", "Tokyo", "Melbourne"] #變數城市=以下字串
+print (cities) #列印 (城市)
+print (cities[1]) #列印 (城市 [1])    由於程式是由0開始計算 所以第一個會是Prague
+print (cities[1:4]) #列印 (城市 [1:4]) 列印出來會是['Prague', 'Cape Town', 'Tokyo'] 由於執行到4就停止了所以只有三個
+print (cities[1:4:2]) #列印 城市 [1:4:2]) 列印出來會是['Prague', 'Tokyo'] 因為步數設定為2 程式執行會把1~4由左至右一次跳過兩個進行輸出
+print (cities[0:3]) #列印 城市 [0:3]) 列印出來會是['San Diego', 'Prague', 'Cape Town'] 這次是從0開始計算
+print (cities[:3]) #列印 城市 [:3]) 列印出來會是['San Diego', 'Prague', 'Cape Town'] 由於未輸入數值,默認為0
+print (cities[2:5]) #列印 城市 [2:5]) 列印出來會是 ['Cape Town', 'Tokyo', 'Melbourne'] 從2~5
+print (cities[2:]) #列印 城市 [2:]) 列印出來會是 ['Cape Town', 'Tokyo', 'Melbourne'] 如果結束未輸入默認為列表的長度之值
+print (cities[0:5:2]) #列印 城市 [0:5:2]) 列印出來會是['San Diego', 'Cape Town', 'Melbourne'] 程式執行會把0~5由左至右一次跳過兩個進行輸出
+print (cities[::2]) #列印 城市 [::2]) 列印出來會是 ['San Diego', 'Cape Town', 'Melbourne'] 未輸入開始會默認0終點會默認列表的長度
+print (cities[4]) #列印 城市 [4]) 列印出來會是 Melbourne 
+print (cities[-1]) #列印 城市 [-1]) 列印出來會是 Melbourne -值會倒退計算 "含前不含後"
+print (cities[-4:-1]) #列印 城市 [-4:-1]) 列印出來會是 ['Prague', 'Cape Town', 'Tokyo']
+cities[3:0:-1] #這個是切片操作 如果列印出來會是 ['Tokyo', 'Cape Town', 'Prague']
+cities[-2:-5:-1] #這個是切片操作 如果列印出來會是 ['Tokyo', 'Cape Town', 'Prague']
+print (cities[::-1]) #列印 城市 [::-1]) ['Melbourne', 'Tokyo', 'Cape Town', 'Prague', 'San Diego']</pre>
+<p><span>第七題: </span></p>
+<p><span> <a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/79026a010ed4190ba729d3e311edd94a10f68b1a/w12hw9.py">感官</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義一個包含五種感官的清單
+senses = ["eyes", "nose", "ears", "tongue", "skin"]
+print(senses)  # 輸出原始的感官清單
+ 
+# 將清單中索引為1的元素從 "nose" 改為 "smell"
+senses[1] = "smell"
+print(senses)  # 輸出更新後的感官清單
+ 
+# 將索引範圍為3到5的元素（"tongue", "skin"）改為 ["taste", "touch"]
+senses[3:5] = ["taste", "touch"]
+print(senses)  # 輸出更新後的感官清單
+ 
+# 將索引範圍從0到3，步長為2的元素（"eyes", "ears"）改為 ["sight", "hearing"]
+senses[0:3:2] = ["sight", "hearing"]
+print(senses)  # 輸出最終更新後的感官清單
+</pre>
+<p><span><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/5a2a2df950ef414e6f3377030d3f27445fd11dce/w12hw10.py">行星</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義一個行星列表
+planets = ["Mercury", "Mars", "Earth", "Neptune"]
+# 輸出原始行星列表
+print(planets)
+ 
+# 將 "Jupiter" 加入列表的末尾
+planets = planets + ["Jupiter"]
+# 輸出更新後的行星列表
+print(planets)
+ 
+# 在索引 2 前插入 "Venus"
+# 先取出索引 0 到 1 的元素，然後加上 "Venus" 和索引 2 到 4 的元素
+planets = planets[0:2] + ["Venus"] + planets[2:5]
+# 輸出再次更新的行星列表
+print(planets)
+ 
+# 在索引 5 位置後插入 "Uranus" 和 "Saturn"
+# 取出索引 0 到 4 的元素，加上新元素，然後加上索引 5 之後的元素
+planets = planets[:5] + ["Uranus", "Saturn"] + planets[5:]
+# 輸出最終的行星列表
+print(planets)
+</pre>
+<p><span><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/d17027c7472e8b4594e04a21ab4ceeeea461d3ab/w12%2520hw11.py">房子</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">house = ["kitchen", "dining room", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
+print(house)  # 原始列表
+ 
+# 刪除 "dining room"
+del house[1]
+print(house)  # ["kitchen", "living room", "bedroom", "bathoom", "garden", "balcony", "terrace"]
+ 
+# 刪除 "garden" 和 "balcony"
+del house[4:6]
+print(house)  # ["kitchen", "living room", "bedroom", "bathoom", "terrace"]
+ 
+# 刪除 "kitchen", "bedroom", 和 "terrace"
+del house[::2]
+print(house)  # ["living room", "bathoom"]
+ 
+# 刪除整個清單
+del house
+try:
+    print(house)  # 此處會觸發 NameError
+except NameError:
+    print("The variable 'house' no longer exists.")</pre>
+<p><span>第八題:</span></p>
+<p><span> <a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/0ae7d2394fdff6d0319391fada99c933a631cbff/w12hw12.py">我朋友最喜歡的菜</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 定義朋友的名字列表
+friends = ["Geetha", "Luca", "Daisy", "Juhan"]  
+ 
+# 定義喜愛的食物列表
+dishes  = ["sushi", "burgers", "tacos", "pizza"]  
+ 
+# 打印朋友的名字
+print("My friends' names are:")  
+print(friends)  
+ 
+# 使用 for 迴圈遍歷朋友列表，打印索引和對應的朋友名字
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("friend: " + friends[index])  # 打印對應的朋友名字
+ 
+# 打印喜愛的食物
+print("Their favorite dishes are:")  
+print(dishes)  
+ 
+# 使用 for 迴圈遍歷食物列表，打印索引和對應的食物
+for index in range(0, 4):  
+    print("index:  " + str(index))  # 打印當前索引
+    print("dish: " + dishes[index])  # 打印對應的食物
+ 
+# 使用 for 迴圈，同時列出朋友和他們喜愛的食物
+for index in range(0, 4):  
+    print("My friend " + friends[index] + "'s favorite dish is " + dishes[index])
+</pre>
+<p><span>第九題:</span></p>
+<p><span> <a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/7429e7f96a03438b8f01992856375478cb90d1de/w12hw13.py">在動物園</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 動物清單
+animals = ["giraffe", "penguin", "dolphin"]
+print(animals)  # 輸出清單
+ 
+# 針對清單中的每個位置進行操作
+for i in range(0, len(animals)):  # 使用 len() 動態取得清單長度
+    print("-- Beginning of loop --")
+    # 輸出每個元素及其位置
+    print("The element in position " + str(i) + " is " + animals[i])
+ 
+# 想要看到的動物
+wanted_to_see = "penguin"
+ 
+# 針對清單中的每個位置進行操作
+for i in range(0, len(animals)):
+    # 如果當前的動物是想看的那個
+    if animals[i] == wanted_to_see:
+        # 輸出特別訊息
+        print("I saw a " + animals[i] + " and I really wanted to see it!")
+    # 如果當前的動物不是特別想看的那個
+    else:
+        # 輸出一般訊息
+        print("I saw a " + animals[i])</pre>
+<p><span>第十題:</span></p>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/d2b899f978b6c94dac527ee900e31fe6/raw/3de0e3c16200df296e9af2c993d555f383aa1ce6/w12hw14.py">我的手套在哪裡</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">accessories = ["belt", "hat", "gloves", "sunglasses", "ring"]
+print(accessories)
+ 
+# 逐一列出元素及其位置
+for i in range(len(accessories)):
+    print(f"The element {accessories[i]} is in position {i}")
+ 
+# 列出長度等於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) == 6:
+        print(f"The element {accessories[i]} is in position {i} and it has 6 characters")
+ 
+# 列出長度小於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) &lt; 6:
+        print(f"The element {accessories[i]} is in position {i} and it has less than 6 characters")
+ 
+# 定義閾值：6，列出長度大於 6 的元素
+n_of_characters = 6
+for i in range(len(accessories)):
+    if len(accessories[i]) &gt; n_of_characters:
+        print(f"The element {accessories[i]} is in position {i} and it has more than {n_of_characters} characters")
+ 
+# 定義閾值：6，列出長度不等於 6 的元素
+for i in range(len(accessories)):
+    if len(accessories[i]) != n_of_characters:
+        print(f"The element {accessories[i]} is in position {i} and it has a number of characters different from {n_of_characters}")
+ 
+# 定義閾值：2，列出位置小於或等於 2 的元素
+position = 2
+for i in range(len(accessories)):
+    if i &lt;= position:
+        print(f"The element {accessories[i]} is in position {i}, which is less than or equal to {position}")
+ 
+# 定義閾值：2，列出位置大於或等於 2 的元素
+for i in range(len(accessories)):
+    if i &gt;= position:
+        print(f"The element {accessories[i]} is in position {i}, which is at least {position}")</pre>
+<p></p><h3>w13_hw</h3>
 <p>程式連結:</p>
 <p>        <a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/cb648cb8e21cd001b87c03e68b617a2f/raw/784357e7821641076fe0b75703fb8d61e4304dbc/1">  紅色正方形</a></p>
 <p></p>
@@ -135,7 +375,92 @@
 <h3>w13_ai</h3>
 <h3>w14_hw</h3>
 <p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/afc591b32a7979edaa3d573ac4fa68bc/raw/f3369af1e4c6b375e5b70a634274a615f687d173/hw1.py">三個圓</a></p>
-<h3>w15</h3>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+import random
+
+# 初始化畫布
+def initialize_canvas(canvas_width=400, canvas_height=400, id="brython_div1"):
+    canvas = html.CANVAS(width=canvas_width, height=canvas_height)
+    brython_div = doc[id]
+    brython_div &lt;= canvas
+    ctx = canvas.getContext("2d")
+    return canvas, ctx
+
+# 隨機顏色生成器
+def random_color_generator():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    return f"rgb({r}, {g}, {b})"
+
+# 判斷點是否在圓內
+def is_point_in_circle(px, py, cx, cy, r):
+    return (px - cx) ** 2 + (py - cy) ** 2 &lt;= r ** 2
+
+# 繪製三個圓形，並填充交集區域
+def draw_circles(x1, y1, r1, x2, y2, r2, x3, y3, r3):
+    # 初始化畫布，創建並取得畫布和其 2D 上下文
+    canvas, ctx = initialize_canvas(400, 400)
+    
+    # 清空畫布
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    
+    # 顏色區域存儲字典
+    color_dict = {}
+    
+    # 使用掃描線方法填充區域，逐行掃描畫布上的每個像素
+    for py in range(0, canvas.height):
+        for px in range(0, canvas.width):
+            in_circle1 = is_point_in_circle(px, py, x1, y1, r1)  # 判斷點是否在圓1內
+            in_circle2 = is_point_in_circle(px, py, x2, y2, r2)  # 判斷點是否在圓2內
+            in_circle3 = is_point_in_circle(px, py, x3, y3, r3)  # 判斷點是否在圓3內
+            
+            # 判斷當前點屬於哪個區域，並選擇相應顏色
+            if in_circle1 and in_circle2 and in_circle3:
+                if "all_three" not in color_dict:
+                    color_dict["all_three"] = random_color_generator()
+                current_color = color_dict["all_three"]
+            elif in_circle1 and in_circle2:
+                if "circle1_and_2" not in color_dict:
+                    color_dict["circle1_and_2"] = random_color_generator()
+                current_color = color_dict["circle1_and_2"]
+            elif in_circle2 and in_circle3:
+                if "circle2_and_3" not in color_dict:
+                    color_dict["circle2_and_3"] = random_color_generator()
+                current_color = color_dict["circle2_and_3"]
+            elif in_circle1 and in_circle3:
+                if "circle1_and_3" not in color_dict:
+                    color_dict["circle1_and_3"] = random_color_generator()
+                current_color = color_dict["circle1_and_3"]
+            elif in_circle1:
+                if "circle1" not in color_dict:
+                    color_dict["circle1"] = random_color_generator()
+                current_color = color_dict["circle1"]
+            elif in_circle2:
+                if "circle2" not in color_dict:
+                    color_dict["circle2"] = random_color_generator()
+                current_color = color_dict["circle2"]
+            elif in_circle3:
+                if "circle3" not in color_dict:
+                    color_dict["circle3"] = random_color_generator()
+                current_color = color_dict["circle3"]
+            else:
+                current_color = "white"  # 背景顏色設為白色
+            
+            # 填充當前像素
+            ctx.fillStyle = current_color
+            ctx.fillRect(px, py, 1, 1)
+
+# 設定三個圓心和半徑
+x1, y1, r1 = 150, 200, 100  # 圓1：圓心 (150, 200)，半徑 100
+x2, y2, r2 = 250, 200, 100  # 圓2：圓心 (250, 200)，半徑 100
+x3, y3, r3 = 200, 100, 100  # 圓3：圓心 (200, 100)，半徑 100
+
+# 呼叫畫圓函式，並繪製三個圓
+draw_circles(x1, y1, r1, x2, y2, r2, x3, y3, r3)
+</pre>
+<p></p><h3>w15</h3>
 <p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/a53f2af22adf3dabcad01a2fc83350ac/raw/9ca4edf363158797f8024e1a655c9c3a4a8fa6db/hw1.py">"從1累加到100"</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sum = 0
 for i in range(1, 101):
@@ -201,7 +526,7 @@ print("從" + str(init) + "累加到" + str(upto) + "，只加尾數為8的數="
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 2 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
 <h3>w16_exam1</h3>
-<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/f13d85c240347529ede706dd80e0e5a6/raw/47777b3caccc6761e5a12821b9a86abedcc2ede6/w16exam1.py">exam1</a></p>
+<p><a href="https://mdecp2024.github.io/hw-yoyo77651/content/Brython.html?src=https://gist.githubusercontent.com/yoyo77651/f13d85c240347529ede706dd80e0e5a6/raw/81cd06e8a9204678476dadd735968baef7805380/w16exam1.py">exam1</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
 import math
  
@@ -293,7 +618,8 @@ ctx.beginPath()
 ctx.rect(320, 90, 60, 20)
 ctx.fillStyle = "black"
 ctx.fill()</pre>
-<p></p><h1>HW 3</h1>
+<p></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/J6hPze5TnLI?si=f_3ZXweaabgAV9rj" title="YouTube video player" width="560"></iframe></p><h1>HW 3</h1>
 <h4>主題: Python 的數字、演算法與迴圈 (20%)</h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 4 and Part 5</p>
 <p>完成上述流程整理後, 請將 HW3 自評分數輸入 cp2024 自評表單中.</p>
@@ -402,7 +728,8 @@ if __name__ == "__main__":
     ctx, offset_x, offset_y = draw_maze(maze_angle)
     label_coordinate(ctx, offset_x, offset_y, text_angle)
 </pre>
-<p></p><h1>HW 4</h1>
+<p></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/iL_UhY9vbvg?si=re3K5INuwoztrS0A" title="YouTube video player" width="560"></iframe></p><h1>HW 4</h1>
 <h4>主題: 利用 Python 控制機電模擬系統 (20%)</h4>
 <p style="padding-left: 30px;">利用 <a href="https://solvespace.com/">https://solvespace.com/</a> 建立機械系統零組件</p>
 <p style="padding-left: 30px;">利用 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 建立機電模擬系統</p>
@@ -566,7 +893,8 @@ if __name__ == "__main__":
     path = find_path()
     draw_path(ctx, offset_x, offset_y, maze_angle, path, pixel_scale)
     label_coordinate(ctx, offset_x, offset_y, text_angle)</pre>
-<p></p><h1>Final Report</h1>
+<p></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/M4-0-lpGoiU?si=-Wiubj8xSp4hQLWC" title="YouTube video player" width="560"></iframe></p><h1>Final Report</h1>
 <p>期末口頭與書面專題報告 (20%)</p>
 <p>期末口頭專題報告影片:</p>
 <p style="padding-left: 30px;">......</p>
